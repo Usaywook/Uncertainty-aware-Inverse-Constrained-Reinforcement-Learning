@@ -149,32 +149,43 @@ def get_plot_results_dir(env_id):
             ],
 
             "BC2L_HC_with-action_noise-1e-1": [
-                '../save_model/Binary-HC/train_BC2L_HCWithPos-v0_noise-1e-1-multi_env-May-09-2023-00:15-seed_123/',
-                '../save_model/Binary-HC/train_BC2L_HCWithPos-v0_noise-1e-1-multi_env-May-09-2023-00:15-seed_321/',
-                '../save_model/Binary-HC/train_BC2L_HCWithPos-v0_noise-1e-1-multi_env-May-09-2023-00:15-seed_456/',
-                '../save_model/Binary-HC/train_BC2L_HCWithPos-v0_noise-1e-1-multi_env-May-09-2023-00:15-seed_654/',
+                '../save_model/Binary-HC/train_BC2L_HC-noise-1e-1-multi_env-Aug-28-2024-16:52-seed_123/',
+                '../save_model/Binary-HC/train_BC2L_HC-noise-1e-1-multi_env-Aug-28-2024-19:41-seed_321/',
+                '../save_model/Binary-HC/train_BC2L_HC-noise-1e-1-multi_env-Aug-28-2024-22:36-seed_456/',
+                '../save_model/Binary-HC/train_BC2L_HC-noise-1e-1-multi_env-Aug-29-2024-01:27-seed_654/',
+                '../save_model/Binary-HC/train_BC2L_HC-noise-1e-1-multi_env-Aug-29-2024-04:16-seed_666/',
             ],
 
-            "GAIL_with-action_noise-1e-1": [
-                '../save_model/GAIL-HC/train_GAIL_HCWithPos-v0_noise-1e-1-multi_env-May-09-2023-19:14-seed_123/',
-                '../save_model/GAIL-HC/train_GAIL_HCWithPos-v0_noise-1e-1-multi_env-May-09-2023-19:14-seed_321/',
-                '../save_model/GAIL-HC/train_GAIL_HCWithPos-v0_noise-1e-1-multi_env-May-09-2023-19:14-seed_456/',
-                '../save_model/GAIL-HC/train_GAIL_HCWithPos-v0_noise-1e-1-multi_env-May-09-2023-19:14-seed_654/',
-            ],
-
-            "VICRL_HC_with-action_noise-1e-1": [
-                '../save_model/VICRL-HC/train_VICRL_HCWithPos-v0_noise-1e-1-multi_env-May-09-2023-19:18-seed_123/',
-                '../save_model/VICRL-HC/train_VICRL_HCWithPos-v0_noise-1e-1-multi_env-May-09-2023-19:18-seed_321/',
-                '../save_model/VICRL-HC/train_VICRL_HCWithPos-v0_noise-1e-1-multi_env-May-09-2023-19:18-seed_456/',
-                '../save_model/VICRL-HC/train_VICRL_HCWithPos-v0_noise-1e-1-multi_env-May-09-2023-19:18-seed_654/',
-
+            "GAIL_HC_with-action_noise-1e-1": [
+                '../save_model/GAIL-HC/train_GAIL_HC-noise-1e-1-multi_env-Aug-28-2024-16:51-seed_123/',
+                '../save_model/GAIL-HC/train_GAIL_HC-noise-1e-1-multi_env-Aug-28-2024-18:28-seed_321/',
+                '../save_model/GAIL-HC/train_GAIL_HC-noise-1e-1-multi_env-Aug-28-2024-20:04-seed_456/',
+                '../save_model/GAIL-HC/train_GAIL_HC-noise-1e-1-multi_env-Aug-28-2024-21:41-seed_654/',
+                '../save_model/GAIL-HC/train_GAIL_HC-noise-1e-1-multi_env-Aug-28-2024-23:17-seed_666/',
             ],
 
             "ICRL_HC_with-action_noise-1e-1": [
-                '../save_model/ICRL-HC/train_ICRL_HCWithPos-v0_noise-1e-1-notsbg-multi_env-Apr-15-2023-20:15-seed_123/',
-                '../save_model/ICRL-HC/train_ICRL_HCWithPos-v0_noise-1e-1-notsbg-multi_env-Apr-15-2023-20:15-seed_321/',
-                '../save_model/ICRL-HC/train_ICRL_HCWithPos-v0_noise-1e-1-notsbg-multi_env-Apr-15-2023-20:15-seed_456/',
-                '../save_model/ICRL-HC/train_ICRL_HCWithPos-v0_noise-1e-1-notsbg-multi_env-Apr-15-2023-20:15-seed_654/',
+                '../save_model/ICRL-HC/train_ICRL_HC-noise-1e-1-multi_env-Aug-28-2024-16:51-seed_123/',
+                '../save_model/ICRL-HC/train_ICRL_HC-noise-1e-1-multi_env-Aug-28-2024-19:11-seed_321/',
+                '../save_model/ICRL-HC/train_ICRL_HC-noise-1e-1-multi_env-Aug-28-2024-21:26-seed_456/',
+                '../save_model/ICRL-HC/train_ICRL_HC-noise-1e-1-multi_env-Aug-28-2024-23:44-seed_654/',
+                '../save_model/ICRL-HC/train_ICRL_HC-noise-1e-1-multi_env-Aug-29-2024-01:57-seed_666/',
+            ],
+
+            "VICRL_HC_with-action_noise-1e-1": [
+                '../save_model/VICRL-HC/train_VICRL_HC-noise-1e-1-multi_env-Aug-28-2024-16:51-seed_123/',
+                '../save_model/VICRL-HC/train_VICRL_HC-noise-1e-1-multi_env-Aug-28-2024-19:31-seed_321/',
+                '../save_model/VICRL-HC/train_VICRL_HC-noise-1e-1-multi_env-Aug-28-2024-22:08-seed_456/',
+                '../save_model/VICRL-HC/train_VICRL_HC-noise-1e-1-multi_env-Aug-29-2024-00:47-seed_654/',
+                '../save_model/VICRL-HC/train_VICRL_HC-noise-1e-1-multi_env-Aug-29-2024-03:17-seed_666/',
+            ],
+
+            "UAICRL_HC_with-action_noise-1e-1": [
+                '../save_model/ICRL-HC/train_UAICRL_HC-noise-1e-1-multi_env-Aug-28-2024-16:50-seed_123/',
+                '../save_model/ICRL-HC/train_UAICRL_HC-noise-1e-1-multi_env-Aug-28-2024-20:47-seed_321/',
+                '../save_model/ICRL-HC/train_UAICRL_HC-noise-1e-1-multi_env-Aug-29-2024-00:43-seed_456/',
+                '../save_model/ICRL-HC/train_UAICRL_HC-noise-1e-1-multi_env-Aug-29-2024-04:25-seed_654/',
+                '../save_model/ICRL-HC/train_UAICRL_HC-noise-1e-1-multi_env-Aug-29-2024-07:59-seed_666/',
             ],
 
             "DICRL_Spline_CVaR_HC_with-action_noise-1e-1": [

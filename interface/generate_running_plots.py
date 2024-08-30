@@ -122,13 +122,11 @@ def generate_plots():
         # "PPO_dis_lag_Spline_exp_costadv_HC_with-action_noise-1e-1": 'DLPO-Neutral',
         # "PPO_dis_lag_Spline_CVaR_costadv_HC_with-action_noise-1e-1": 'DLPO-Averse,
 
-        "BC2L_with-action_noise-1e-1-storebygame": 'BC2L',
-        "GAIL_with-action_noise-1e-1-storebygame": 'GACL',
-        "ICRL_with-action_noise-1e-1-storebygame": 'ICRL',
-        "VICRL_with-action_noise-1e-1-storebygame": 'VICRL',
-        "CICRL-HC-noise-1e-1": "UAICRL-NRS",
-        "DICRL_Spline_CVaR_with-action_noise-1e-1-storebygame": 'UAICRL-NDA',
-        "CDICRL_Spline_EXP_with-action_noise-1e-1-storebygame": 'UAICRL',
+        "BC2L_HC_with-action_noise-1e-1": 'BC2L',
+        "GAIL_HC_with-action_noise-1e-1": 'GACL',
+        "ICRL_HC_with-action_noise-1e-1": 'ICRL',
+        "VICRL_HC_with-action_noise-1e-1": 'VICRL',
+        "UAICRL_HC_with-action_noise-1e-1": 'UAICRL',
     }
 
     # env_id = 'AntWall-V0'
