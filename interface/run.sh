@@ -12,6 +12,10 @@ do
     # run PPO_Lag
     CUDA_VISIBLE_DEVICES=$DEVICE python train_policy.py ../config/highD/velocity_constraint/train_ppo_lag_highD_velocity_constraint.yaml -n 5 -s $SEED
 
+    # run DLPO
+    CUDA_VISIBLE_DEVICES=$DEVICE python train_policy.py ../config/highD/velocity_constraint/train_DLPO_QRDQN-Averse_highD_velocity_constraint-1e-1.yaml -n 5 -s $SEED
+    CUDA_VISIBLE_DEVICES=$DEVICE python train_policy.py ../config/highD/velocity_constraint/train_DLPO_QRDQN-Neutral_highD_velocity_constraint-1e-1.yaml -n 5 -s $SEED
+
     # run BC2L
     CUDA_VISIBLE_DEVICES=$DEVICE python train_icrl.py ../config/highD/velocity_constraint/train_Binary_highD_velocity_constraint-1e-1.yaml -n 5 -s $SEED
 
