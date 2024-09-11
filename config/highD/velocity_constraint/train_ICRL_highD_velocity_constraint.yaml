@@ -3,7 +3,7 @@ group: 'ICRL'
 device: 'cuda'
 verbose: 1
 env:
-  config_path: "../config/highD_velocity_constraint/highD_environment_configurations_no_velocity_penalty-40.yaml"
+  config_path: "../config/highD/velocity_constraint/highD_environment_configurations_no_velocity_penalty-40.yaml"
   train_env_id : 'commonroad-v1'
   eval_env_id: 'commonroad-v1'
   save_dir: '../save_model'
@@ -87,4 +87,3 @@ CN:
   cn_eps: 0.00001
   backward_iters: 10
   anneal_clr_by_factor: 0.9
-
