@@ -116,6 +116,8 @@ def train(args):
                                                 'train_env_id'] else None,
                                             circle_info=config['env']['circle_info'] if 'Circle' in config[
                                                 'env']['train_env_id'] else None,
+                                            max_scene_per_env=config['env']['max_scene_per_env']
+                                            if 'max_scene_per_env' in config['env'].keys() else None,
                                             )
 
     save_test_mother_dir = os.path.join(save_model_mother_dir, "test/")
@@ -139,6 +141,8 @@ def train(args):
                                               'train_env_id'] else None,
                                           circle_info=config['env']['circle_info'] if 'Circle' in config[
                                               'env']['train_env_id'] else None,
+                                          max_scene_per_env=config['env']['max_scene_per_env']
+                                            if 'max_scene_per_env' in config['env'].keys() else None,
                                           )
 
     if 'WGW' in config['env']['train_env_id']:
