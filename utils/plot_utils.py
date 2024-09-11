@@ -10,7 +10,7 @@ import numpy as np
 
 def plot_curve(draw_keys, x_dict, y_dict, save_name,
                ylim=(0, 1),
-               linewidth=3, xlabel=None, ylabel=None, title=None,
+               linewidth=3, xlabel=None, ylabel=None, title=None, adjust=None,
                apply_rainbow=False, apply_scatter=False,
                img_size=(8, 5), axis_size=15, legend_size=15):
     import matplotlib as mpl
@@ -42,6 +42,8 @@ def plot_curve(draw_keys, x_dict, y_dict, save_name,
         plt.ylabel(ylabel, fontsize=axis_size)
     if title is not None:
         plt.title(title, fontsize=axis_size)
+    if adjust is not None:
+        plt.subplots_adjust(left=adjust[0], right=adjust[1], top=adjust[2], bottom=adjust[3])
     if not save_name:
         plt.show()
     else:
@@ -61,6 +63,7 @@ def plot_shadow_curve(draw_keys,
                       plot_name=None,
                       legend_dict=None,
                       linestyle_dict=None,
+                      adjust=None,
                       linewidth=3,
                       img_size=(7, 5),
                       axis_size=15,
@@ -100,6 +103,8 @@ def plot_shadow_curve(draw_keys,
         plt.xlabel(xlabel, fontsize=axis_size)
     if ylabel is not None:
         plt.ylabel(ylabel, fontsize=axis_size)
+    if adjust is not None:
+        plt.subplots_adjust(left=adjust[0], right=adjust[1], top=adjust[2], bottom=adjust[3])
     if not plot_name:
         plt.show()
     else:

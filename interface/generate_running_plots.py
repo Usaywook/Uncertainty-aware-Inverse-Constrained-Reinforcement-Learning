@@ -18,6 +18,7 @@ def plot_results(mean_results_moving_avg_dict,
                  save_label,
                  legend_dict=None,
                  linestyle_dict=None,
+                 adjust=None,
                  legend_size=20,
                  # legend_size=20,
                  axis_size=None,
@@ -49,85 +50,82 @@ def plot_results(mean_results_moving_avg_dict,
                       legend_size=legend_size,
                       #legend_size=None,
                       linestyle_dict=linestyle_dict,
-                      axis_size=axis_size if axis_size is not None else 24,
+                      axis_size=axis_size if axis_size is not None else 18,
+                      adjust=adjust,
                       title_size=20,
                       #title_size=20,
                       plot_name=plot_name, )
 
 
 def generate_plots():
-    axis_size = None
     save = True
     save_msg = ''
     modes = ['train']
     plot_mode = 'all-methods'
 
-    # env_id = 'WGW-v0'
-    # max_episodes = 100  # 100
-    # average_num = 10
-    # max_reward = 1
-    # min_reward = 0
-    # plot_key = ['reward', 'reward_nc', 'constraint', 'reward_valid']
-    # label_key = ['reward', 'reward_nc', 'Constraint Violation Rate', 'reward_valid']
-    # label_key = [None, None, None, None]
-    # img_size = None
-    # save = True
-    # save_msg = '_setting-1-noise-1e-2'
-    # title = 'Girdworld-1 with Prob0.99'
-    # # save_msg = 'test'
-    # # title = 'test'
-    # constraint_keys = ['constraint']
-    # plot_y_lim_dict = {'reward': None,
-    #                    'reward_nc': None,
-    #                    'constraint': None,
-    #                    'reward_valid': None,
-    #                    }
-    #
-    # method_names_labels_dict = {
+    # env_id = 'HCWithPos-v0'
+    env_id = 'highD_velocity_constraint'
 
-    #     'BC2L-setting1-noise1e-2': 'BC2L',
-    #     'GAIL-setting1-noise1e-2': 'GACL',
-    #     'ICRL-setting1-noise1e-2':'ICRL',
-    #     'VICRL-setting1-noise1e-2': 'VICRL',
-    #     'GICRL-setting1-noise1e-2': 'UAICRL',
+    if env_id == 'WGW-v0':
+        max_episodes = 100  # 100
+        average_num = 10
+        max_reward = 1
+        min_reward = 0
+        plot_key = ['reward', 'reward_nc', 'constraint', 'reward_valid']
+        label_key = ['reward', 'reward_nc', 'Constraint Violation Rate', 'reward_valid']
+        label_key = [None, None, None, None]
+        img_size = None
+        axis_size = 20
+        save_msg = '_setting-1-noise-1e-2'
+        title = 'Girdworld-1 with Prob0.99'
+        # save_msg = 'test'
+        # title = 'test'
+        constraint_keys = ['constraint']
+        plot_y_lim_dict = {'reward': None,
+                        'reward_nc': None,
+                        'constraint': None,
+                        'reward_valid': None,
+                        }
 
-    # }
+        method_names_labels_dict = {
+            'BC2L-setting1-noise1e-2': 'BC2L',
+            'GAIL-setting1-noise1e-2': 'GACL',
+            'ICRL-setting1-noise1e-2':'ICRL',
+            'VICRL-setting1-noise1e-2': 'VICRL',
+            'GICRL-setting1-noise1e-2': 'UAICRL',
+        }
 
-    env_id = 'HCWithPos-v0'
-    max_episodes = 6000
-    average_num = 300
-    max_reward = float('inf')
-    min_reward = 0
-    plot_key = ['reward', 'reward_nc', 'constraint', 'reward_valid']
-    label_key = ['reward', 'reward_nc', 'Constraint Violation Rate', 'Feasible Rewards']
-    #label_key = [None, None, None, None]
-    save = True
-    constraint_keys = ['constraint']
-    plot_y_lim_dict = {'reward': None,
-                       'reward_nc': None,
-                       'constraint': None,
-                       'reward_valid': None,
-                       }
-    img_size = (8, 8)
-    noise = '1e-1'
-    plot_mode = 'Noise-{0}'.format(noise)
-    title = 'Blocked Half-Cheetah with Noise $\mathcal{N}(0,0.1)$'
-    # title = 'Blocked Half-Cheetah'
-    # plot_mode = 'Total'
-    # title = 'Blocked Half-Cheetah with Stochastic Noise'
+    if env_id == 'HCWithPos-v0':
+        max_episodes = 6000
+        average_num = 300
+        max_reward = float('inf')
+        min_reward = 0
+        plot_key = ['reward', 'reward_nc', 'constraint', 'reward_valid']
+        label_key = ['Rewards', 'Rewards NC', 'Constraint Violation Rate', 'Feasible Rewards']
+        #label_key = [None, None, None, None]
+        constraint_keys = ['constraint']
+        plot_y_lim_dict = {'reward': None,
+                        'reward_nc': None,
+                        'constraint': None,
+                        'reward_valid': None,
+                        }
+        axis_size = None
+        img_size = [8.5, 6.5]
+        adjust = (0.13, 0.96, 0.92, 0.12)
+        noise = '1e-1'
+        plot_mode = 'Noise-{0}'.format(noise)
+        title = 'Blocked Half-Cheetah with Noise $\mathcal{N}(0,0.1)$'
 
-    method_names_labels_dict = {
-
-        # "PPO_lag_td_HC_with-action_noise-1e-1": "PPO_Lag",
-        # "PPO_dis_lag_Spline_exp_costadv_HC_with-action_noise-1e-1": 'DLPO-Neutral',
-        # "PPO_dis_lag_Spline_CVaR_costadv_HC_with-action_noise-1e-1": 'DLPO-Averse,
-
-        "BC2L_HC_with-action_noise-1e-1": 'BC2L',
-        "GAIL_HC_with-action_noise-1e-1": 'GACL',
-        "ICRL_HC_with-action_noise-1e-1": 'ICRL',
-        "VICRL_HC_with-action_noise-1e-1": 'VICRL',
-        "UAICRL_HC_with-action_noise-1e-1": 'UAICRL',
-    }
+        method_names_labels_dict = {
+            # "PPO_lag_td_HC_with-action_noise-1e-1": "PPO_Lag",
+            # "PPO_dis_lag_Spline_exp_costadv_HC_with-action_noise-1e-1": 'DLPO-Neutral',
+            # "PPO_dis_lag_Spline_CVaR_costadv_HC_with-action_noise-1e-1": 'DLPO-Averse,
+            "BC2L_HC_with-action_noise-1e-1": 'BC2L',
+            "GAIL_HC_with-action_noise-1e-1": 'GACL',
+            "ICRL_HC_with-action_noise-1e-1": 'ICRL',
+            "VICRL_HC_with-action_noise-1e-1": 'VICRL',
+            "UAICRL_HC_with-action_noise-1e-1": 'UAICRL',
+        }
 
     # env_id = 'AntWall-V0'
     # max_episodes = 10000 #12000
@@ -140,7 +138,6 @@ def generate_plots():
     # #label_key = ['reward', 'Constraint Violation Rate', 'Feasible Rewards', 'reward_nc']
     # label_key = [None, None, None, None]
     # img_size = (8, 8)
-    # save = True
     # noise = '1e-1'
     # plot_mode = 'Noise-{0}'.format(noise)
     # title = 'Blocked Ant with Noise $\mathcal{N}(0,0.1)$'
@@ -221,7 +218,6 @@ def generate_plots():
     # # plot_y_lim_dict = {'reward': (0, 700),
     # #                    'reward_nc': (0, 700),
     # #                    'constraint': (0, 1)}
-    # save = True
     # img_size = (8, 8)
     # plot_y_lim_dict = {'reward': None,
     #                    'reward_nc': None,
@@ -258,7 +254,6 @@ def generate_plots():
     # #label_key = ['reward', 'reward_nc', 'Constraint Violation Rate', 'Feasible Rewards']
     # label_key = [None, None, None, None]
     # img_size = (8, 8)
-    # save = True
     # plot_y_lim_dict = {'reward': None,
     #                    'reward_nc': None,
     #                    'constraint': None,
@@ -279,54 +274,53 @@ def generate_plots():
     #     'CDICRL_Spline_EXP_SwmWithPos-v0-noise-1e-1': 'UAICRL',
     # }
 
-   #  env_id = 'highD_velocity_constraint'
-   #  max_episodes = 3500
-   #  average_num = 100
-   #  max_reward = 50
-   #  min_reward = 0
-   #  axis_size = 20
-   #  img_size = [8.5, 6.5]
-   #  save = True
-   #  noise = '1e-1'
-   #  plot_mode = 'Noise-{0}'.format(noise)
-   #  title = 'HighD Velocity Constraint with Noise $\mathcal{N}(0,0.1)$'
-   # # title = 'HighD Velocity Constraint'
-   #  #plot_mode = 'Total'
-   #  #title = 'HighD Velocity Constraint '
-   #  constraint_keys = ['is_over_speed']
-   #  plot_key = ['reward', 'reward_nc', 'reward_valid', 'is_collision', 'is_off_road',
-   #              'is_goal_reached', 'is_time_out', 'avg_velocity', 'is_over_speed', 'success_rate']
-   #  label_key = ['Rewards', 'Feasible Rewards', 'Feasible Rewards', 'Collision Rate', 'Off Road Rate',
-   #               'Goal Reached Rate', 'Time Out Rate', 'Avg. Velocity', 'Speed Constraint Violation Rate',
-   #               'Success Rate']
-   #  plot_y_lim_dict = {'reward': None,
-   #                     'reward_nc': None,
-   #                     'reward_valid': None,
-   #                     'is_collision': None,
-   #                     'is_off_road': None,
-   #                     'is_goal_reached': None,
-   #                     'is_time_out': None,
-   #                     'avg_velocity': None,
-   #                     'is_over_speed': None,
-   #                     'success_rate': None}
-   #  bound_results = {
-   #      'reward': 50,
-   #      'reward_nc': 50,
-   #      'reward_valid': 50,
-   #      'is_collision': 0,
-   #      'is_off_road': 0,
-   #      'is_goal_reached': 0,
-   #      'is_time_out': 0,
-   #      'is_over_speed': 0,
-   #      'success_rate': 1,
-   #  }
-   #  method_names_labels_dict = {
-   #      "BC2L-vel-noise-1e-1": 'BC2L',
-   #      "GAIL-vel-noise-1e-1": 'GAIL',
-   #      "ICLR-vel-noise-1e-1": 'ICRL',
-   #      "VICRL-vel-noise-1e-1": 'VICRL',
-   #      "CDICLR-CVaR-QRDQN-vel-noise-1e-1": 'UAICRL',
-   #  }
+    if env_id == 'highD_velocity_constraint':
+        max_episodes = 3500
+        average_num = 100
+        max_reward = 50
+        min_reward = 0
+        axis_size = 20
+        img_size = [8.5, 6.5]
+        adjust = (0.13, 0.96, 0.92, 0.12)
+        noise = '1e-1'
+        plot_mode = 'Noise-{0}'.format(noise)
+        # plot_mode = 'Total'
+        title = 'HighD Velocity Constraint with Noise $\mathcal{N}(0,0.1)$'
+        constraint_keys = ['is_over_speed']
+        plot_key = ['reward', 'reward_nc', 'reward_valid', 'is_collision', 'is_off_road',
+                    'is_goal_reached', 'is_time_out', 'avg_velocity', 'is_over_speed', 'success_rate']
+        label_key = ['Rewards', 'Feasible Rewards', 'Feasible Rewards', 'Collision Rate', 'Off Road Rate',
+                    'Goal Reached Rate', 'Time Out Rate', 'Avg. Velocity', 'Speed Constraint Violation Rate',
+                    'Success Rate']
+        plot_y_lim_dict = {'reward': None,
+                        'reward_nc': None,
+                        'reward_valid': None,
+                        'is_collision': None,
+                        'is_off_road': None,
+                        'is_goal_reached': None,
+                        'is_time_out': None,
+                        'avg_velocity': None,
+                        'is_over_speed': None,
+                        'success_rate': None}
+        bound_results = {
+            'reward': 50,
+            'reward_nc': 50,
+            'reward_valid': 50,
+            'is_collision': 0,
+            'is_off_road': 0,
+            'is_goal_reached': 0,
+            'is_time_out': 0,
+            'is_over_speed': 0,
+            'success_rate': 1,
+        }
+        method_names_labels_dict = {
+            "BC2L-vel-noise-1e-1": 'BC2L',
+            "GAIL-vel-noise-1e-1": 'GACL',
+            "ICRL-vel-noise-1e-1": 'ICRL',
+            "VICRL-vel-noise-1e-1": 'VICRL',
+            "UAICRL-CVaR-vel-noise-1e-1": 'UAICRL_CVAR',
+            "UAICRL-EXP-vel-noise-1e-1": 'UAICRL_EXP',
+        }
 
     if plot_mode == 'part':
         for method_name in method_names_labels_dict.copy().keys():
@@ -338,10 +332,8 @@ def generate_plots():
     linestyle_all = {
         'PPO-Lag': '-',
         "PI-Lag": '-' if plot_mode == 'part' else '--',
+        "BC2L": '-.',
         "GACL": '-',
-        "GAIL": '-',
-        "BC2L": '-',
-        "MECL": '-.',
         "ICRL": '-',
         "VICRL": "-",
         "UAICRL": '-',
@@ -349,6 +341,8 @@ def generate_plots():
         "UAICRL-NRS": '-',
         "DLPO-Neutral": '-',
         "DLPO-Averse": '-',
+        "UAICRL_CVAR": '-',
+        "UAICRL_EXP": '-',
     }
 
     linestyle_dict = {}
@@ -455,6 +449,7 @@ def generate_plots():
                              axis_size=axis_size,
                              img_size=img_size,
                              linestyle_dict=linestyle_dict,
+                             adjust=adjust,
                              )
         for idx in range(len(plot_key)):
             mean_results_moving_avg_dict = {}
@@ -495,6 +490,7 @@ def generate_plots():
                          axis_size=axis_size,
                          img_size=img_size,
                          linestyle_dict=linestyle_dict,
+                         adjust=adjust,
                          )
 
 

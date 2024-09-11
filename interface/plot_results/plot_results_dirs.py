@@ -127,93 +127,44 @@ def get_plot_results_dir(env_id):
         }
     elif env_id == 'HCWithPos-v0':
         log_path_dict = {
-            "PPO_lag_td_HC_with-action_noise-1e-1": [
-                '../save_model/4.8/train_ppo_lag_td_n50_HCWithPos-v0-1e-1-multi_env-Apr-08-2023-13:23-seed_123/',
-                '../save_model/4.8/train_ppo_lag_td_n50_HCWithPos-v0-1e-1-multi_env-Apr-08-2023-13:23-seed_321/',
-                '../save_model/4.8/train_ppo_lag_td_n50_HCWithPos-v0-1e-1-multi_env-Apr-08-2023-13:23-seed_456/',
-                '../save_model/4.8/train_ppo_lag_td_n50_HCWithPos-v0-1e-1-multi_env-Apr-08-2023-13:23-seed_654/',
-            ],
-
-            "PPO_dis_lag_Spline_exp_costadv_HC_with-action_noise-1e-1": [
-                '../save_model/4.7/train_ppo_dis_lag_Spline_EXP_costadv_n50_HCWithPos-v0-noise-1e-1-multi_env-Apr-05-2023-10:20-seed_123/',
-                '../save_model/4.7/train_ppo_dis_lag_Spline_EXP_costadv_n50_HCWithPos-v0-noise-1e-1-multi_env-Apr-05-2023-10:20-seed_321/',
-                '../save_model/4.7/train_ppo_dis_lag_Spline_EXP_costadv_n50_HCWithPos-v0-noise-1e-1-multi_env-Apr-06-2023-22:30-seed_456/',
-                '../save_model/4.7/train_ppo_dis_lag_Spline_EXP_costadv_n50_HCWithPos-v0-noise-1e-1-multi_env-Apr-06-2023-22:32-seed_654/',
-            ],
-
-            "PPO_dis_lag_Spline_CVaR_costadv_HC_with-action_noise-1e-1": [
-                '../save_model/4.7/train_ppo_dis_lag_Spline_CVaR_costadv_n50_HCWithPos-v0-noise-1e-1-multi_env-Apr-05-2023-10:19-seed_123/',
-                '../save_model/4.7/train_ppo_dis_lag_Spline_CVaR_costadv_n50_HCWithPos-v0-noise-1e-1-multi_env-Apr-05-2023-10:19-seed_321/',
-                '../save_model/4.7/train_ppo_dis_lag_Spline_CVaR_costadv_n50_HCWithPos-v0-noise-1e-1-multi_env-Apr-06-2023-22:33-seed_654/',
-                '../save_model/4.7/train_ppo_dis_lag_Spline_CVaR_costadv_n50_HCWithPos-v0-noise-1e-1-multi_env-Apr-06-2023-22:34-seed_456/',
-            ],
-
             "BC2L_HC_with-action_noise-1e-1": [
-                '../save_model/Binary-HC/train_BC2L_HC-noise-1e-1-multi_env-Aug-28-2024-16:52-seed_123/',
-                '../save_model/Binary-HC/train_BC2L_HC-noise-1e-1-multi_env-Aug-28-2024-19:41-seed_321/',
-                '../save_model/Binary-HC/train_BC2L_HC-noise-1e-1-multi_env-Aug-28-2024-22:36-seed_456/',
-                '../save_model/Binary-HC/train_BC2L_HC-noise-1e-1-multi_env-Aug-29-2024-01:27-seed_654/',
-                '../save_model/Binary-HC/train_BC2L_HC-noise-1e-1-multi_env-Aug-29-2024-04:16-seed_666/',
+                '../save_model/mujoco_noise/Binary-HC/train_BC2L_HC-noise-1e-1-multi_env-Aug-28-2024-16:52-seed_123/',
+                '../save_model/mujoco_noise/Binary-HC/train_BC2L_HC-noise-1e-1-multi_env-Aug-28-2024-19:41-seed_321/',
+                '../save_model/mujoco_noise/Binary-HC/train_BC2L_HC-noise-1e-1-multi_env-Aug-28-2024-22:36-seed_456/',
+                '../save_model/mujoco_noise/Binary-HC/train_BC2L_HC-noise-1e-1-multi_env-Aug-29-2024-01:27-seed_654/',
+                '../save_model/mujoco_noise/Binary-HC/train_BC2L_HC-noise-1e-1-multi_env-Aug-29-2024-04:16-seed_666/',
             ],
 
             "GAIL_HC_with-action_noise-1e-1": [
-                '../save_model/GAIL-HC/train_GAIL_HC-noise-1e-1-multi_env-Aug-28-2024-16:51-seed_123/',
-                '../save_model/GAIL-HC/train_GAIL_HC-noise-1e-1-multi_env-Aug-28-2024-18:28-seed_321/',
-                '../save_model/GAIL-HC/train_GAIL_HC-noise-1e-1-multi_env-Aug-28-2024-20:04-seed_456/',
-                '../save_model/GAIL-HC/train_GAIL_HC-noise-1e-1-multi_env-Aug-28-2024-21:41-seed_654/',
-                '../save_model/GAIL-HC/train_GAIL_HC-noise-1e-1-multi_env-Aug-28-2024-23:17-seed_666/',
+                '../save_model/mujoco_noise/GAIL-HC/train_GAIL_HC-noise-1e-1-multi_env-Aug-28-2024-16:51-seed_123/',
+                '../save_model/mujoco_noise/GAIL-HC/train_GAIL_HC-noise-1e-1-multi_env-Aug-28-2024-18:28-seed_321/',
+                '../save_model/mujoco_noise/GAIL-HC/train_GAIL_HC-noise-1e-1-multi_env-Aug-28-2024-20:04-seed_456/',
+                '../save_model/mujoco_noise/GAIL-HC/train_GAIL_HC-noise-1e-1-multi_env-Aug-28-2024-21:41-seed_654/',
+                '../save_model/mujoco_noise/GAIL-HC/train_GAIL_HC-noise-1e-1-multi_env-Aug-28-2024-23:17-seed_666/',
             ],
 
             "ICRL_HC_with-action_noise-1e-1": [
-                '../save_model/ICRL-HC/train_ICRL_HC-noise-1e-1-multi_env-Aug-28-2024-16:51-seed_123/',
-                '../save_model/ICRL-HC/train_ICRL_HC-noise-1e-1-multi_env-Aug-28-2024-19:11-seed_321/',
-                '../save_model/ICRL-HC/train_ICRL_HC-noise-1e-1-multi_env-Aug-28-2024-21:26-seed_456/',
-                '../save_model/ICRL-HC/train_ICRL_HC-noise-1e-1-multi_env-Aug-28-2024-23:44-seed_654/',
-                '../save_model/ICRL-HC/train_ICRL_HC-noise-1e-1-multi_env-Aug-29-2024-01:57-seed_666/',
+                '../save_model/mujoco_noise/ICRL-HC/train_ICRL_HC-noise-1e-1-multi_env-Aug-28-2024-16:51-seed_123/',
+                '../save_model/mujoco_noise/ICRL-HC/train_ICRL_HC-noise-1e-1-multi_env-Aug-28-2024-19:11-seed_321/',
+                '../save_model/mujoco_noise/ICRL-HC/train_ICRL_HC-noise-1e-1-multi_env-Aug-28-2024-21:26-seed_456/',
+                '../save_model/mujoco_noise/ICRL-HC/train_ICRL_HC-noise-1e-1-multi_env-Aug-28-2024-23:44-seed_654/',
+                '../save_model/mujoco_noise/ICRL-HC/train_ICRL_HC-noise-1e-1-multi_env-Aug-29-2024-01:57-seed_666/',
             ],
 
             "VICRL_HC_with-action_noise-1e-1": [
-                '../save_model/VICRL-HC/train_VICRL_HC-noise-1e-1-multi_env-Aug-28-2024-16:51-seed_123/',
-                '../save_model/VICRL-HC/train_VICRL_HC-noise-1e-1-multi_env-Aug-28-2024-19:31-seed_321/',
-                '../save_model/VICRL-HC/train_VICRL_HC-noise-1e-1-multi_env-Aug-28-2024-22:08-seed_456/',
-                '../save_model/VICRL-HC/train_VICRL_HC-noise-1e-1-multi_env-Aug-29-2024-00:47-seed_654/',
-                '../save_model/VICRL-HC/train_VICRL_HC-noise-1e-1-multi_env-Aug-29-2024-03:17-seed_666/',
+                '../save_model/mujoco_noise/VICRL-HC/train_VICRL_HC-noise-1e-1-multi_env-Aug-28-2024-16:51-seed_123/',
+                '../save_model/mujoco_noise/VICRL-HC/train_VICRL_HC-noise-1e-1-multi_env-Aug-28-2024-19:31-seed_321/',
+                '../save_model/mujoco_noise/VICRL-HC/train_VICRL_HC-noise-1e-1-multi_env-Aug-28-2024-22:08-seed_456/',
+                '../save_model/mujoco_noise/VICRL-HC/train_VICRL_HC-noise-1e-1-multi_env-Aug-29-2024-00:47-seed_654/',
+                '../save_model/mujoco_noise/VICRL-HC/train_VICRL_HC-noise-1e-1-multi_env-Aug-29-2024-03:17-seed_666/',
             ],
 
             "UAICRL_HC_with-action_noise-1e-1": [
-                '../save_model/ICRL-HC/train_UAICRL_HC-noise-1e-1-multi_env-Aug-28-2024-16:50-seed_123/',
-                '../save_model/ICRL-HC/train_UAICRL_HC-noise-1e-1-multi_env-Aug-28-2024-20:47-seed_321/',
-                '../save_model/ICRL-HC/train_UAICRL_HC-noise-1e-1-multi_env-Aug-29-2024-00:43-seed_456/',
-                '../save_model/ICRL-HC/train_UAICRL_HC-noise-1e-1-multi_env-Aug-29-2024-04:25-seed_654/',
-                '../save_model/ICRL-HC/train_UAICRL_HC-noise-1e-1-multi_env-Aug-29-2024-07:59-seed_666/',
-            ],
-
-            "DICRL_Spline_CVaR_HC_with-action_noise-1e-1": [
-                '../save_model/ICRL-HC/train_DICRL_Spline_CVaR_HCWithPos-v0_noise-1e-1-notsbg-multi_env-Apr-15-2023-20:15-seed_123/',
-                '../save_model/ICRL-HC/train_DICRL_Spline_CVaR_HCWithPos-v0_noise-1e-1-notsbg-multi_env-Apr-15-2023-20:15-seed_321/',
-                '../save_model/ICRL-HC/train_DICRL_Spline_CVaR_HCWithPos-v0_noise-1e-1-notsbg-multi_env-Apr-15-2023-20:15-seed_456/',
-                '../save_model/ICRL-HC/train_DICRL_Spline_CVaR_HCWithPos-v0_noise-1e-1-notsbg-multi_env-Apr-15-2023-20:15-seed_654/',
-            ],
-
-            "DICRL_Spline_EXP_HC_with-action_noise-1e-1": [
-                '../save_model/ICRL-HC/train_DICRL_Spline_EXP_HCWithPos-v0_noise-1e-1-notsbg-multi_env-Apr-15-2023-20:15-seed_123/',
-                '../save_model/ICRL-HC/train_DICRL_Spline_EXP_HCWithPos-v0_noise-1e-1-notsbg-multi_env-Apr-15-2023-20:15-seed_321/',
-                '../save_model/ICRL-HC/train_DICRL_Spline_EXP_HCWithPos-v0_noise-1e-1-notsbg-multi_env-Apr-15-2023-20:15-seed_456/',
-                '../save_model/ICRL-HC/train_DICRL_Spline_EXP_HCWithPos-v0_noise-1e-1-notsbg-multi_env-Apr-15-2023-20:15-seed_654/',
-            ],
-
-            "CDICRL_Spline_EXP_HC_with-action_noise-1e-1": [
-                '../save_model/ICRL-HC/CDICRL/train_ContinuesDICRL_Spline_EXP_HCWithPos-v0_noise-1e-1-notsbg-multi_env-Apr-19-2023-10:03-seed_123/',
-                '../save_model/ICRL-HC/CDICRL/train_ContinuesDICRL_Spline_EXP_HCWithPos-v0_noise-1e-1-notsbg-multi_env-Apr-19-2023-10:03-seed_321/',
-                '../save_model/ICRL-HC/CDICRL/train_ContinuesDICRL_Spline_EXP_HCWithPos-v0_noise-1e-1-notsbg-multi_env-Apr-19-2023-10:03-seed_456/',
-                '../save_model/ICRL-HC/CDICRL/train_ContinuesDICRL_Spline_EXP_HCWithPos-v0_noise-1e-1-notsbg-multi_env-Apr-19-2023-10:03-seed_654/',
-            ],
-
-            "CDICRL_Spline_CVaR_HC_with-action_noise-1e-1": [
-                '../save_model/ICRL-HC/CDICRL/train_ContinuesDICRL_Spline_CVaR_HCWithPos-v0_noise-1e-1-notsbg-multi_env-Apr-19-2023-16:14-seed_123/',
-                '../save_model/ICRL-HC/CDICRL/train_ContinuesDICRL_Spline_CVaR_HCWithPos-v0_noise-1e-1-notsbg-multi_env-Apr-19-2023-16:14-seed_321/',
-                '../save_model/ICRL-HC/CDICRL/train_ContinuesDICRL_Spline_CVaR_HCWithPos-v0_noise-1e-1-notsbg-multi_env-Apr-19-2023-16:14-seed_456/',
-                '../save_model/ICRL-HC/CDICRL/train_ContinuesDICRL_Spline_CVaR_HCWithPos-v0_noise-1e-1-notsbg-multi_env-Apr-19-2023-16:14-seed_654/',
+                '../save_model/mujoco_noise/UAICRL-HC/train_UAICRL_HC-noise-1e-1-multi_env-Aug-28-2024-16:50-seed_123/',
+                '../save_model/mujoco_noise/UAICRL-HC/train_UAICRL_HC-noise-1e-1-multi_env-Aug-28-2024-20:47-seed_321/',
+                '../save_model/mujoco_noise/UAICRL-HC/train_UAICRL_HC-noise-1e-1-multi_env-Aug-29-2024-00:43-seed_456/',
+                '../save_model/mujoco_noise/UAICRL-HC/train_UAICRL_HC-noise-1e-1-multi_env-Aug-29-2024-04:25-seed_654/',
+                '../save_model/mujoco_noise/UAICRL-HC/train_UAICRL_HC-noise-1e-1-multi_env-Aug-29-2024-07:59-seed_666/',
             ],
         }
     elif env_id == 'AntWall-V0':
@@ -583,34 +534,46 @@ def get_plot_results_dir(env_id):
     elif env_id == 'highD_velocity_constraint':
         log_path_dict = {
             'BC2L-vel-noise-1e-1': [
-                '../save_model/Binary-highD-velocity/train_Binary_highD_velocity_constraint-1e-1-multi_env-Aug-05-2023-14:22-seed_123/',
-                '../save_model/Binary-highD-velocity/train_Binary_highD_velocity_constraint-1e-1-multi_env-Aug-05-2023-14:22-seed_321/',
-                '../save_model/Binary-highD-velocity/train_Binary_highD_velocity_constraint-1e-1-multi_env-Aug-05-2023-14:22-seed_456/',
-                '../save_model/Binary-highD-velocity/train_Binary_highD_velocity_constraint-1e-1-multi_env-Aug-05-2023-14:22-seed_654/',
+                '../save_model/highD_noise/Binary-highD-velocity/train_Binary_highD_velocity_constraint-1e-1-multi_env-Sep-05-2024-00:45-seed_123/',
+                '../save_model/highD_noise/Binary-highD-velocity/train_Binary_highD_velocity_constraint-1e-1-multi_env-Sep-06-2024-05:47-seed_321/',
+                '../save_model/highD_noise/Binary-highD-velocity/train_Binary_highD_velocity_constraint-1e-1-multi_env-Sep-07-2024-12:46-seed_456/',
+                '../save_model/highD_noise/Binary-highD-velocity/train_Binary_highD_velocity_constraint-1e-1-multi_env-Sep-08-2024-19:08-seed_654/',
+                '../save_model/highD_noise/Binary-highD-velocity/train_Binary_highD_velocity_constraint-1e-1-multi_env-Sep-10-2024-00:03-seed_666/',
             ],
             'GAIL-vel-noise-1e-1': [
-                '../save_model/GAIL-highD-velocity/train_GAIL_highd_velocity_constraint-1e-1-multi_env-Aug-05-2023-14:22-seed_123/',
-                '../save_model/GAIL-highD-velocity/train_GAIL_highd_velocity_constraint-1e-1-multi_env-Aug-05-2023-14:22-seed_321/',
-                '../save_model/GAIL-highD-velocity/train_GAIL_highd_velocity_constraint-1e-1-multi_env-Aug-05-2023-14:22-seed_456/',
-                '../save_model/GAIL-highD-velocity/train_GAIL_highd_velocity_constraint-1e-1-multi_env-Aug-05-2023-14:22-seed_654/',
+                '../save_model/highD_noise/GAIL-highD-velocity/train_GAIL_highd_velocity_constraint-1e-1-multi_env-Sep-04-2024-20:46-seed_123/',
+                '../save_model/highD_noise/GAIL-highD-velocity/train_GAIL_highd_velocity_constraint-1e-1-multi_env-Sep-06-2024-01:48-seed_321/',
+                '../save_model/highD_noise/GAIL-highD-velocity/train_GAIL_highd_velocity_constraint-1e-1-multi_env-Sep-07-2024-08:49-seed_456/',
+                '../save_model/highD_noise/GAIL-highD-velocity/train_GAIL_highd_velocity_constraint-1e-1-multi_env-Sep-08-2024-15:16-seed_654/',
+                '../save_model/highD_noise/GAIL-highD-velocity/train_GAIL_highd_velocity_constraint-1e-1-multi_env-Sep-09-2024-20:24-seed_666/',
             ],
             'ICRL-vel-noise-1e-1': [
-                '../save_model/ICRL-highD-velocity/train_ICRL_highD_velocity_constraint-1e-1-multi_env-Aug-04-2023-15:50-seed_123/',
-                '../save_model/ICRL-highD-velocity/train_ICRL_highD_velocity_constraint-1e-1-multi_env-Aug-04-2023-15:50-seed_321/',
-                '../save_model/ICRL-highD-velocity/train_ICRL_highD_velocity_constraint-1e-1-multi_env-Aug-04-2023-15:50-seed_456/',
-                '../save_model/ICRL-highD-velocity/train_ICRL_highD_velocity_constraint-1e-1-multi_env-Aug-04-2023-15:50-seed_654/',
+                '../save_model/highD_noise/ICRL-highD-velocity/train_ICRL_highD_velocity_constraint-1e-1-multi_env-Sep-05-2024-07:02-seed_123/',
+                '../save_model/highD_noise/ICRL-highD-velocity/train_ICRL_highD_velocity_constraint-1e-1-multi_env-Sep-06-2024-12:56-seed_321/',
+                '../save_model/highD_noise/ICRL-highD-velocity/train_ICRL_highD_velocity_constraint-1e-1-multi_env-Sep-07-2024-19:27-seed_456/',
+                '../save_model/highD_noise/ICRL-highD-velocity/train_ICRL_highD_velocity_constraint-1e-1-multi_env-Sep-09-2024-01:39-seed_654/',
+                '../save_model/highD_noise/ICRL-highD-velocity/train_ICRL_highD_velocity_constraint-1e-1-multi_env-Sep-10-2024-07:04-seed_666/',
             ],
             'VICRL-vel-noise-1e-1': [
-                '../save_model/VICRL-highD-velocity/train_VICRL_highD_velocity_constraint-1e-1-multi_env-Aug-05-2023-14:22-seed_123/',
-                '../save_model/VICRL-highD-velocity/train_VICRL_highD_velocity_constraint-1e-1-multi_env-Aug-05-2023-14:22-seed_321/',
-                '../save_model/VICRL-highD-velocity/train_VICRL_highD_velocity_constraint-1e-1-multi_env-Aug-05-2023-14:22-seed_456/',
-                '../save_model/VICRL-highD-velocity/train_VICRL_highD_velocity_constraint-1e-1-multi_env-Aug-05-2023-14:22-seed_654/',
+                '../save_model/highD_noise/VICRL-highD-velocity/train_VICRL_highD_velocity_constraint-1e-1-multi_env-Sep-09-2024-23:39-seed_123/',
+                '../save_model/highD_noise/VICRL-highD-velocity/train_VICRL_highD_velocity_constraint-1e-1-multi_env-Sep-10-2024-06:43-seed_321/',
+                '../save_model/highD_noise/VICRL-highD-velocity/train_VICRL_highD_velocity_constraint-1e-1-multi_env-Sep-10-2024-13:56-seed_456/',
+                '../save_model/highD_noise/VICRL-highD-velocity/train_VICRL_highD_velocity_constraint-1e-1-multi_env-Sep-10-2024-21:02-seed_654/',
+                '../save_model/highD_noise/VICRL-highD-velocity/train_VICRL_highD_velocity_constraint-1e-1-multi_env-Sep-11-2024-04:09-seed_666/',
             ],
-            'CDICLR-CVaR-QRDQN-vel-noise-1e-1': [
-                '../save_model/ICRL-highD-velocity/train_CDICRL_CVaR_highD_velocity_constraint-1e-1-multi_env-Aug-04-2023-15:50-seed_123/',
-                '../save_model/ICRL-highD-velocity/train_CDICRL_CVaR_highD_velocity_constraint-1e-1-multi_env-Aug-04-2023-15:50-seed_321/',
-                '../save_model/ICRL-highD-velocity/train_CDICRL_CVaR_highD_velocity_constraint-1e-1-multi_env-Aug-04-2023-15:50-seed_456/',
-                '../save_model/ICRL-highD-velocity/train_CDICRL_CVaR_highD_velocity_constraint-1e-1-multi_env-Aug-04-2023-15:50-seed_654/',
+            'UAICRL-CVaR-vel-noise-1e-1': [
+                '../save_model/highD_noise/UAICRL-highD-velocity/train_DICRL_QRDQN_CVaR_highD_velocity_constraint-1e-1-multi_env-Sep-05-2024-13:26-seed_123/',
+                '../save_model/highD_noise/UAICRL-highD-velocity/train_DICRL_QRDQN_CVaR_highD_velocity_constraint-1e-1-multi_env-Sep-06-2024-19:46-seed_321/',
+                '../save_model/highD_noise/UAICRL-highD-velocity/train_DICRL_QRDQN_CVaR_highD_velocity_constraint-1e-1-multi_env-Sep-08-2024-02:12-seed_456/',
+                '../save_model/highD_noise/UAICRL-highD-velocity/train_DICRL_QRDQN_CVaR_highD_velocity_constraint-1e-1-multi_env-Sep-09-2024-07:46-seed_654/',
+                '../save_model/highD_noise/UAICRL-highD-velocity/train_DICRL_QRDQN_CVaR_highD_velocity_constraint-1e-1-multi_env-Sep-10-2024-13:05-seed_666/',
+            ],
+            'UAICRL-EXP-vel-noise-1e-1': [
+                '../save_model/highD_noise/UAICRL-highD-velocity/train_DICRL_QRDQN_EXP_highD_velocity_constraint-1e-1-multi_env-Sep-05-2024-19:34-seed_123/',
+                '../save_model/highD_noise/UAICRL-highD-velocity/train_DICRL_QRDQN_EXP_highD_velocity_constraint-1e-1-multi_env-Sep-07-2024-02:42-seed_321/',
+                '../save_model/highD_noise/UAICRL-highD-velocity/train_DICRL_QRDQN_EXP_highD_velocity_constraint-1e-1-multi_env-Sep-08-2024-08:47-seed_456/',
+                '../save_model/highD_noise/UAICRL-highD-velocity/train_DICRL_QRDQN_EXP_highD_velocity_constraint-1e-1-multi_env-Sep-09-2024-14:12-seed_654/',
+                '../save_model/highD_noise/UAICRL-highD-velocity/train_DICRL_QRDQN_EXP_highD_velocity_constraint-1e-1-multi_env-Sep-10-2024-20:00-seed_666/',
             ],
         }
     else:
