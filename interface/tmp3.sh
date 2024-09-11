@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DEVICE=6
+DEVICE=5
 SEEDS=(123 321 456)
 
 for SEED in ${SEEDS[@]}
