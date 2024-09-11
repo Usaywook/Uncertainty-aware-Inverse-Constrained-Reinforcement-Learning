@@ -3,7 +3,7 @@ group: 'VICRL'
 device: 'cuda'
 verbose: 1
 env:
-  config_path: "../config/highD_velocity_distance_constraint/highD_environment_configurations_no_velocity-40_distance-20_penalty.yaml"
+  config_path: "../config/highD/velocity_distance_constraint/highD_environment_configurations_no_velocity-40_distance-20_penalty.yaml"
   train_env_id : 'commonroad-v1'
   eval_env_id: 'commonroad-v1'
   save_dir: '../save_model'
@@ -87,4 +87,3 @@ CN:
   anneal_clr_by_factor: 0.9
   di_prior: [9, 1]
   mode: 'sample'
-

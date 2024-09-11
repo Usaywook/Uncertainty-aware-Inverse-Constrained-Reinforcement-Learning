@@ -3,7 +3,7 @@ group: 'PPO-Lag'
 device: 'cuda'
 verbose: 1
 env:
-  config_path: "../config/highD_distance_constraint/highD_environment_configurations_no_slo_distance_penalty_dm-20.yaml"
+  config_path: "../config/highD/distance_constraint/highD_environment_configurations_no_slo_distance_penalty_dm-20.yaml"
   train_env_id : 'commonroad-v1'
   eval_env_id: 'commonroad-v1'
   save_dir: '../save_model'
