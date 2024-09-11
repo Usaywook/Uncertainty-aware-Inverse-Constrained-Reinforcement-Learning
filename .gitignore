@@ -1,3 +1,7 @@
 save_model/*
 interface/plot_results/HCWithPos-v0/*
 interface/plot_results/highD_velocity_constraint/*
+data/expert_data/HighDDistanceConstraint
+data/expert_data/HighDVelocityConstraint
+data/expert_data/HighDVelocityDistanceConstraint
+
