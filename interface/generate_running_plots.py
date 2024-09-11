@@ -127,7 +127,7 @@ def generate_plots():
             "UAICRL_HC_with-action_noise-1e-1": 'UAICRL',
         }
 
-    # env_id = 'AntWall-V0'
+    # env_id = 'AntWall-v0'
     # max_episodes = 10000 #12000
     # average_num = 600
     # # title = 'Blocked Ant'
